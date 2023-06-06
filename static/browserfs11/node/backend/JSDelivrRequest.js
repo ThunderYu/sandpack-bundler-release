@@ -355,7 +355,7 @@ var JSDelivrRequest = /** @class */ (function (_super) {
         if (filePath.charAt(0) === '/') {
             filePath = filePath.slice(1);
         }
-        return "https://cdn.jsdelivr.net/npm/" + this.dependency + "@" + this.version + "/" + filePath;
+        return "https://gcore.jsdelivr.net/npm/" + this.dependency + "@" + this.version + "/" + filePath;
     };
     JSDelivrRequest.prototype._requestFileAsync = function (p, type, cb) {
         this._requestFileAsyncInternal(this._getHTTPPath(p), type, cb);
