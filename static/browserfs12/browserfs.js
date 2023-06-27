@@ -10611,7 +10611,7 @@ var JSDelivrRequest = /*@__PURE__*/(function (BaseFileSystem) {
         if (filePath.charAt(0) === '/') {
             filePath = filePath.slice(1);
         }
-        return ("https://gcore.jsdelivr.net/npm/" + (this.dependency) + "@" + (this.version) + "/" + filePath);
+        return ("https://fastly.jsdelivr.net/npm/" + (this.dependency) + "@" + (this.version) + "/" + filePath);
     };
     JSDelivrRequest.prototype._requestFileAsync = function _requestFileAsync (p, type, cb) {
         this._requestFileAsyncInternal(this._getHTTPPath(p), type, cb);
