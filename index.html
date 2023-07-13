@@ -8,6 +8,18 @@
     <link rel="manifest" href="/manifest.json" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="mask-icon" href="/csb-ios.svg" color="#fff" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/npm1.service-worker.js")
+          .then(function (registration) {
+            console.log("Service Worker 注册成功:", registration);
+          })
+          .catch(function (error) {
+            console.log("Service Worker 注册失败:", error);
+          });
+      }
+    </script>
     <script
       src="/static/browserfs12/browserfs.min.js"
       type="text/javascript"
